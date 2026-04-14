@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarjeta Digital | [Tu Nombre]</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Talabartería Chillán</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -12,208 +12,261 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Georgia', 'Garamond', serif;
+        }
+
         body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #2D1E16 0%, #4A3B2F 100%); 
-            min-height: 100vh;
+            background: url('cuero1.jpeg') center/cover no-repeat fixed;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
         }
 
         .card {
-            background: linear-gradient(145deg, #1A120F, #0E0A08); 
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.7);
-            max-width: 450px;
-            width: 100%;
+            background: linear-gradient(145deg, #2c1810, #1a0f0a);
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh;
             overflow: hidden;
-            border: 2px solid #D2B48C;
+            display: flex;
+            flex-direction: column;
+            border: none;
         }
-
-        .header {
-            background: linear-gradient(135deg, #4A3B2F, #6B5749); 
-            padding: 40px 30px;
+                                     
+         .header {
+            background: url('cuero1.jpeg') no-repeat;
+            background-position: center;
+            background-size: 100% 100%; /* Se estira para encajar perfecto */
+            padding: 4.0vh 5vw;
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
+            flex-shrink: 0;
+         }
 
-        /* Código de la animación de textura restaurado */
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(255,255,255,0.05) 10px,
-                rgba(255,255,255,0.05) 20px
-            );
-            animation: slide 20s linear infinite; /* LA PROPIEDAD DE ANIMACIÓN */
-        }
-
-        /* Los fotogramas clave que definen la animación */
-        @keyframes slide {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-        /* Fin del código de la animación de textura */
+        
+        
 
         .logo {
-            /* ESTE DIV MANTIENE EL ESPACIO PARA EL LOGO */
-            height: 50px; 
-            margin-bottom: 10px;
+            width: 12vh;
+            height: 12vh;
+            max-width: 130px;
+            max-height: 130px;
+            margin: 0 auto 1vh;
+            border-radius: 50%;
+            overflow: hidden;
+            background: rgba(245, 222, 179, 0.1);
+            border: 3px solid #F5DEB3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
             z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #F5DEB3;
-            font-size: 20px;
         }
 
-        h1 {
-            color: #F5DEB3;
-            font-size: 32px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            position: relative;
-            z-index: 1;
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .subtitle {
-            color: #D2B48C;
-            font-size: 16px; 
-            margin-top: 8px;
-            font-style: normal;
+            color: #F5DEB3;
+            font-size: clamp(10px, 3vh, 20px);
+            font-weight: normal;
+            font-style: italic;
+            letter-spacing: 2px;
+            text-shadow: 3px 2px 4px rgba(0,0,0,0.5);
             position: relative;
             z-index: 1;
         }
 
         .content {
-            padding: 35px 30px;
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.8vh 5vw;
+            display: flex;
+            flex-direction: column;
         }
 
         .info-item {
             display: flex;
             align-items: center;
-            margin-bottom: 22px;
-            padding: 15px;
-            background: rgba(210, 180, 140, 0.08); 
-            border-radius: 12px;
-            border-left: 4px solid #D2B48C;
+            margin-bottom: 1.5vh;
+            padding: 1.7vh 4vw;
+            background: rgba(139, 69, 19, 0.15);
+            border-radius: 5px;
+            border-left: 3px solid #8B4513;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .info-item:hover {
+            background: rgba(139, 69, 19, 0.25);
+            transform: translateX(5px);
         }
 
         .icon {
-            font-size: 24px;
-            margin-right: 15px;
+            font-size: clamp(20px, 3.2vh, 24px);
+            margin-right: 4vw;
             min-width: 30px;
             text-align: center;
+            color: #d6ccbe;
         }
 
         .info-text {
-            color: #F5DEB3;
-            font-size: 15px;
-            line-height: 1.5;
+            color: #e1c48e;
+            font-size: clamp(16px, 2.2vh, 16px);
+            line-height: 1.4;
+            flex: 1;
         }
 
         .info-text a {
-            color: #D2B48C; 
+            color: #f3dbbb;
             text-decoration: none;
-            transition: color 0.3s ease;
         }
 
-        .info-text a:hover {
-            color: #F5DEB3;
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #8B4513, transparent);
+            margin: 1vh 0;
+            flex-shrink: 0;
         }
 
         .qr-section {
             text-align: center;
-            padding: 25px;
+            padding: 2.0vh 0;
             background: rgba(245, 222, 179, 0.05);
-            margin: 20px 0;
-            border-radius: 12px;
+            margin: 1vh 0;
+            border-radius: 0.6px;
+            flex-shrink: 0;
         }
 
         .qr-code {
             background: white;
-            padding: 15px;
-            border-radius: 12px;
+            padding: 1.2vh;
+            border-radius: 0.7px;
             display: inline-block;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            width: 15vh;
+            height: 15vh;
+            max-width: 160px;
+            max-height: 160px;
         }
 
         .qr-code img {
-            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .qr-label {
-            color: #D2B48C; 
-            margin-top: 12px;
-            font-size: 14px;
+            color: #DEB887;
+            margin-top: 0.7vh;
+            font-size: clamp(9px, 1.8vh, 13px);
             font-style: italic;
         }
 
         .footer {
             text-align: center;
-            padding: 25px;
-            background: rgba(210, 180, 140, 0.1);
+            padding: 1.5vh 4vw;
+            background: rgba(139, 69, 19, 0.2);
             color: #D2B48C;
-            font-size: 13px;
+            font-size: clamp(10px, 1.6vh, 12px);
+            flex-shrink: 0;
+            line-height: 1.4;
+            font-style: italic;
         }
 
-        .divider {
-            height: 2px;
-            background: linear-gradient(to right, transparent, #D2B48C, transparent);
-            margin: 20px 0;
+        /* Ocultar scrollbar */
+        .content::-webkit-scrollbar {
+            display: none;
+        }
+        .content {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Ajustes para pantallas muy pequeñas */
+        @media (max-height: 600px) {
+            .header {
+                padding: 2.5vh 5vw;
+            }
+            .logo {
+                width: 9vh;
+                height: 9vh;
+                margin-bottom: 1vh;
+            }
+            .info-item {
+                padding: 1.3vh 4vw;
+                margin-bottom: 1.3vh;
+            }
+            .qr-section {
+                padding: 1.5vh 0;
+                margin: 1vh 0;
+            }
+            .qr-code {
+                width: 14vh;
+                height: 14vh;
+            }
+        }
+
+        @media (max-height: 500px) {
+            .qr-section {
+                display: none;
+            }
         }
     </style>
-    </head>
+</head>
 <body>
     <div class="card">
         <div class="header">
             <div class="logo">
-                LOGO AQUÍ 🎨
-            </div> 
-            <h1>[Tu Nombre Completo]</h1>
-            <div class="subtitle">Artista Plástico & Arquitecto Digital</div>
+                <img src="logo.jpg" alt="Logo ARTE">
+            </div>
+            <div class="subtitle">Gerardo Jara</div>
+            <div class="subtitle">Dibujante</div>
         </div>
 
         <div class="content">
             <div class="info-item">
-                <div class="icon">🖼️</div>
+                <div class="icon"><i class="fas fa-globe"></i></div>
                 <div class="info-text">
-                    <a href="https://galeria-artistica.vercel.app" target="_blank">galeria-artistica.vercel.app</a>
+                    <a href="https://web-talabarteria-Chillán.vercel.app/" target="_blank">talabarteriaChillán.cl</a>
                 </div>
             </div>
-            
+
             <div class="info-item">
-                <div class="icon">📱</div>
+                <div class="icon"><i class="fab fa-instagram"></i></div>
                 <div class="info-text">
-                    <a href="https://wa.me/56912345678" target="_blank">WhatsApp Business: +56 9 1234 5678</a>
+                    <a href="https://www.instagram.com/talabarteriaChillán/" target="_blank">@talabarteriaChillán</a>
                 </div>
             </div>
-            
+
             <div class="info-item">
-                <div class="icon">💻</div>
+                <div class="icon"><i class="fab fa-whatsapp"></i></div>
                 <div class="info-text">
-                    <a href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20la%20Consultoría%20BI" target="_blank">Consultoría: Proyectos de Business Intelligence</a>
+                    <a href="https://wa.me/56977710313" target="_blank">WhatsApp "Talabartería Chillán"</a>
                 </div>
             </div>
-            
+
             <div class="info-item">
-                <div class="icon">📍</div>
+                <div class="icon"><i class="fas fa-phone"></i></div>
                 <div class="info-text">
-                    Base de Operaciones: Regiones de Ñuble y Biobío<br>
-                    (Servicios B2B Físicos: 0-150km)
+                    <a href="tel:56977710313">+56977710313</a>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="info-text">
+                    <a href="https://www.google.com/maps">
+                                               
+                    </a>
                 </div>
             </div>
 
@@ -221,15 +274,15 @@
 
             <div class="qr-section">
                 <div class="qr-code">
-                    <img src="[URL/RUTA A TU IMAGEN QR REAL]" alt="Código QR de la Galería" width="150" height="150" style="display: block;">
-                    </div>
-                <div class="qr-label">Escanea: Galería de Arte (Refugio Anti-Ruido)</div>
+                    <img src="QR.png" alt="Código QR">
+                </div>
+                
             </div>
         </div>
 
         <div class="footer">
-            ✨ Arte Clásico, Cero Distracciones ✨<br>
-            Pintura • Escultura • Sistemas BI para PyMEs
+            Artesanía en cuero de Alta calidad<br>
+            Riendas • Monturas • Accesorios
         </div>
     </div>
 </body>
