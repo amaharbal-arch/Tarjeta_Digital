@@ -1,0 +1,137 @@
+/* Core Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Georgia', serif;
+    background: #1a0f0a;
+}
+
+body {
+    background: url('cuero1.jpeg') center/cover no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card Architecture */
+.card {
+    background: linear-gradient(145deg, #2c1810, #1a0f0a);
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: url('cuero1.jpeg') center/cover no-repeat;
+    padding: 4vh 5vw;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 12vh;
+    height: 12vh;
+    max-width: 130px;
+    max-height: 130px;
+    margin: 0 auto 1vh;
+    border-radius: 50%;
+    border: 3px solid #F5DEB3;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.subtitle {
+    color: #F5DEB3;
+    font-size: clamp(14px, 3vh, 20px);
+    font-style: italic;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* Content & Efficiency */
+.content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2vh 5vw;
+    scrollbar-width: none;
+}
+
+.content::-webkit-scrollbar { display: none; }
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5vh;
+    padding: 1.5vh 4vw;
+    background: rgba(139, 69, 19, 0.15);
+    border-radius: 5px;
+    border-left: 3px solid #8B4513;
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateX(5px);
+    background: rgba(139, 69, 19, 0.25);
+}
+
+.icon {
+    font-size: clamp(20px, 3vh, 24px);
+    margin-right: 4vw;
+    color: #d6ccbe;
+}
+
+.info-text a {
+    color: #e1c48e;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #8B4513, transparent);
+    margin: 1.5vh 0;
+}
+
+/* QR Section */
+.qr-section {
+    text-align: center;
+    padding: 2vh;
+}
+
+.qr-code {
+    background: #fff;
+    padding: 1vh;
+    display: inline-block;
+    width: 15vh;
+    height: 15vh;
+    max-width: 150px;
+}
+
+.qr-code img { width: 100%; height: 100%; }
+
+.footer {
+    text-align: center;
+    padding: 2vh;
+    background: rgba(0,0,0,0.3);
+    color: #D2B48C;
+    font-size: 11px;
+    font-style: italic;
+}
+
+/* Mobile Constraints */
+@media (max-height: 550px) {
+    .qr-section { display: none; }
+}
