@@ -1,0 +1,23 @@
+{
+  "name": "Tarjeta Digital Gerardo Jara",
+  "short_name": "Gerardo Jara",
+  "description": "Tarjeta de presentación digital PWA para el dibujante Gerardo Jara",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#2c1810",
+  "theme_color": "#2c1810",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "images/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
