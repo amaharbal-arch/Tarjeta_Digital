@@ -53,4 +53,29 @@
             Arauco 698, Chillán, Ñuble
         </a>
                 </div>
-        
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="qr-section">
+                <div class="qr-code">
+                    <img src="images/QR.png" alt="Código QR">
+                </div>
+            </div>
+        <div class="footer">
+              <p class="tagline">"Precisión en el arte del Grafito, alma en el papel."</p>
+        </div>
+           
+        </div>
+    </div>
+   <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./ServiceWorker.js')
+                    .then(reg => console.log('Service Worker registrado con éxito'))
+                    .catch(err => console.error('Error al registrar Service Worker', err));
+            });
+        }
+    </script>
+</body>
+</html>
