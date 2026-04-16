@@ -15,6 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .card {
@@ -32,7 +33,7 @@ body {
     background: #121212;
     background-position: center;
     background-size: 100% 100%;
-    padding: 4.0vh 5vw;
+    padding: 2.5vh 5vw;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -40,10 +41,10 @@ body {
 }
 
 .logo {
-    width: 30vh;
-    height: 30vh;
-    max-width: 180px;
-    max-height: 180px;
+    width: 25vh;
+    height: 25vh;
+    max-width: 150px;
+    max-height: 150px;
     margin: 0 auto 1vh;
     border-radius: 50%;
     overflow: hidden;
@@ -64,9 +65,8 @@ body {
 
 .subtitle {
     color: #F5DEB3;
-    font-size: clamp(10px, 3vh, 20px);
+    font-size: clamp(12px, 3vh, 18px);
     font-weight: normal;
-    font-style: italic;
     letter-spacing: 2px;
     text-shadow: 3px 2px 4px rgba(0,0,0,0.5);
     position: relative;
@@ -84,8 +84,8 @@ body {
 .info-item {
     display: flex;
     align-items: center;
-    margin-bottom: 1.5vh;
-    padding: 1.7vh 4vw;
+    margin-bottom: 1vh;
+    padding: 1.2vh 4vw;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 5px;
     border-left: 4px solid #666;
@@ -100,7 +100,7 @@ body {
 }
 
 .icon {
-    font-size: clamp(20px, 3.2vh, 24px);
+    font-size: clamp(18px, 3vh, 24px);
     margin-right: 4vw;
     min-width: 30px;
     text-align: center;
@@ -109,7 +109,7 @@ body {
 
 .info-text {
     color: #cccccc;
-    font-size: clamp(16px, 2.2vh, 16px);
+    font-size: clamp(14px, 2.2vh, 14px);
     line-height: 1.4;
     flex: 1;
 }
@@ -122,13 +122,13 @@ body {
 .divider {
     height: 1px;
     background: linear-gradient(to right, transparent, #999, transparent);
-    margin: 1vh 0;
+    margin: 0.5vh 0;
     flex-shrink: 0;
 }
 
 .qr-section {
     text-align: center;
-    padding: 2.0vh 0;
+    padding: 1.0vh 0;
     background: rgba(245, 222, 179, 0.05);
     margin: 1vh 0;
     border-radius: 0.6px;
@@ -137,12 +137,12 @@ body {
 
 .qr-code {
     background: white;
-    padding: 1.2vh;
+    padding: 1vh;
     border-radius: 0.7px;
     display: inline-block;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    width: 20vh;
-    height: 20vh;
+    width: 15vh;
+    height: 15vh;
     max-width: 160px;
     max-height: 160px;
 }
@@ -155,17 +155,17 @@ body {
 
 .qr-label {
     color: #DEB887;
-    margin-top: 0.7vh;
+    margin-top: 0.5vh;
     font-size: clamp(9px, 1.8vh, 13px);
     font-style: italic;
 }
 
 .footer {
     text-align: center;
-    padding: 2vh 4vw;
+    padding: 1.5vh 4vw;
     background: rgba(245, 222, 179, 0.05);
     color: #f5f5dc;
-    font-size: clamp(14px, 2.2vh, 14px);
+    font-size: clamp(12px, 2.2vh, 14px);
     flex-shrink: 0;
     line-height: 1.5;
     font-style: italic;
