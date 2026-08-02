@@ -8,7 +8,7 @@ Este sistema representa una solución de software orientada a la transición dig
 
 ## 2. Previsualización del Sistema
 <div align="center">
-  <img src="./images/screenshot.jpg" width="250" alt="Captura de la Tarjeta Digital">
+  <img src="https://res.cloudinary.com/deqk2tmer/image/upload/v1785710300/screenshot_pp63ep.jpg" width="250" alt="Captura de la Tarjeta Digital">
   <p><i>Interfaz optimizada para dispositivos móviles con política de Zero-Scroll.</i></p>
 </div>
 
