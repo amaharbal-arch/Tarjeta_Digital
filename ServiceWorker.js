@@ -1,11 +1,9 @@
 const CACHE_NAME = 'tarjeta-v1';
 const assets = [
-  './',
-  './index.html',
-  './style.css',
-  './images/logo_2.jpeg',
-  './images/logo.jpg',
-  './images/QR.png'
+   './',
+   './index.html',
+   './style.css',
+   './manifest.json'
 ];
 
 // Instalar y guardar en caché
